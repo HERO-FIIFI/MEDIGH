@@ -1,20 +1,19 @@
-import React, { useState } from "react"; //6.9k (gzipped: 2.7k)
-import { useNavigate } from 'react-router-dom';
+import React from "react";
 
-import heroImg011 from "../assets/images/hero-bg.png";
-import heroImg022 from "../assets/images/hero-bg.png";
-import heroImg033 from "../assets/images/hero-bg.png";
+import heroImg011 from "../assets/images/doctor (1).jpg";
+import heroImg022 from "../assets/images/doctor (2).jpg";
+import heroImg033 from "../assets/images/blackman (1).jpg";
 import videoIcon from "../assets/images/video-icon.png";
-import avatarIcon from "../assets/images/avatar-icon.png";
+import avatarIcon from "../assets/images/doctors22.jpg";
 import icon01 from "../assets/images/icon01.png";
 import icon02 from "../assets/images/icon02.png";
 import icon03 from "../assets/images/icon03.png";
-import faqImg from "../assets/images/hero-bg.png";
+import faqImg from "../assets/images/blackman (2).jpg";
 import { Link } from 'react-router-dom';
 import { BsArrowRight } from 'react-icons/bs';
 import About from '../components/About/About.jsx';
 import ServiceList from '../components/Services/ServiceList';
-import featureImg from "../assets/images/doctor (1).jpg";
+import featureImg from "../assets/images/youngdoctor (1).jpg";
 import DoctorList from "../components/Doctors/DoctorList";
 import FaqList from "../components/faq/FaqList.jsx";
 import Testimonial from "../components/Testimonial/Testimonial.jsx";
@@ -22,11 +21,6 @@ import Testimonial from "../components/Testimonial/Testimonial.jsx";
 
 
 const Home = () => {
-    const [roomId, setRoomID] = useState()
-    const navigate = useNavigate();
-    const handleJoin = () => {
-        navigate(`/room/${roomId}`)
-    }
     return (<>
 
         {/* ======= hero section ======= */}
@@ -41,12 +35,8 @@ const Home = () => {
 
                             <p className="text__para">No more waiting in line — you're in control of your time.</p>
 
-                            <button className="btn">
+                            <button className="btn glass-button">
                                 Book Appointment
-                            </button>
-                            <input type="text" placeholder="Enter RoomID" value={roomId} onChange={e => setRoomID(e.target.value)} />
-                            <button className="btn" onClick={handleJoin} style={{ backgroundColor: '#4fa9b0' }}>
-                                Join Room
                             </button>
                         </div>
 
@@ -54,7 +44,7 @@ const Home = () => {
                         <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5
                             lg:gap-[30px] ">
 
-                            <div>
+                            <div className="glass-card p-4 rounded-xl">
                                 <h2 className="text-[36px] leading-3[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                                     30+
                                 </h2>
@@ -62,7 +52,7 @@ const Home = () => {
                                 <p className="text__para">Years of Experience</p>
                             </div>
 
-                            <div>
+                            <div className="glass-card p-4 rounded-xl">
                                 <h2 className="text-[36px] leading-3[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                                     15+
                                 </h2>
@@ -70,7 +60,7 @@ const Home = () => {
                                 <p className="text__para">Clinic Centers</p>
                             </div>
 
-                            <div>
+                            <div className="glass-card p-4 rounded-xl">
                                 <h2 className="text-[36px] leading-3[56px] lg:text-[44px] lg:leading-[54px] font-[700] text-headingColor">
                                     100%
                                 </h2>
@@ -83,12 +73,12 @@ const Home = () => {
 
 
                     <div className="flex gap-[30px] justify-end">
-                        <div>
-                            <img className="w-full rounded-xl" src={heroImg011} alt="" />
+                        <div className="glass-card p-2 rounded-xl">
+                            <img className="w-full rounded-xl" src={heroImg011} alt="Doctor consulting with patient" />
                         </div>
-                        <div className="mt-[30px]">
-                            <img src={heroImg022} alt="" className="mb-[30px] w-2/3 rounded-xl" />
-                            <img src={heroImg033} alt="" className="w-2/3 rounded-xl" />
+                        <div className="mt-[30px] glass-card p-2 rounded-xl">
+                            <img src={heroImg022} alt="Medical professionals in hospital" className="mb-[30px] w-2/3 rounded-xl" />
+                            <img src={heroImg033} alt="Healthcare team" className="w-2/3 rounded-xl" />
                         </div>
                     </div>
 
@@ -106,8 +96,8 @@ const Home = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px] ">
-                    <div className="py-[30px] px-5 ">
-                        <div className="flex items-center justify-center"> <img src={icon01} alt="" /></div>
+                    <div className="py-[30px] px-5 glass-card rounded-2xl">
+                        <div className="flex items-center justify-center"> <img src={icon01} alt="Find a doctor icon" /></div>
 
 
                         <div className="mt-[30px]">
@@ -124,8 +114,8 @@ const Home = () => {
 
                     </div>
 
-                    <div className="py-[30px] px-5 ">
-                        <div className="flex items-center justify-center"> <img src={icon02} alt="" /></div>
+                    <div className="py-[30px] px-5 glass-card rounded-2xl">
+                        <div className="flex items-center justify-center"> <img src={icon02} alt="Find clinic icon" /></div>
 
 
                         <div className="mt-[30px]">
@@ -142,8 +132,8 @@ const Home = () => {
 
                     </div>
 
-                    <div className="py-[30px] px-5 ">
-                        <div className="flex items-center justify-center"> <img src={icon03} alt="" /></div>
+                    <div className="py-[30px] px-5 glass-card rounded-2xl">
+                        <div className="flex items-center justify-center"> <img src={icon03} alt="Book appointment icon" /></div>
 
 
                         <div className="mt-[30px]">
@@ -200,8 +190,8 @@ const Home = () => {
 
                     {/* ======== feature img ======== */}
                     <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0 ">
-                        <img src={featureImg} className="w-3/4" alt="" />
-                        <div className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] rounded-[10px] ">
+                        <img src={featureImg} className="w-3/4 glass-card p-2" alt="Doctor conducting virtual consultation" />
+                        <div className="w-[150px] lg:w-[248px] glass-card absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] ">
 
                             <div className="flex items-center justify-between">
                                 <div className="flex items-center gap-[6px] lg:gap-3">
@@ -209,15 +199,15 @@ const Home = () => {
                                     <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-textColor font-[400]">10:00</p>
                                 </div>
                                 <span className="w-5 h-5 lg:w-[34px] lg:h-[34px] flex items-center justify-center bg-yellowColor rounded py-1 px-[6px] lg:py-3 lg:px-[9px] ">
-                                    <img src={videoIcon} alt="" />
+                                    <img src={videoIcon} alt="Video call icon" />
                                 </span>
                             </div>
 
                             <div className="w-[65px] lg:w-[96px] bg-[#CCF0F3] py-1 px-2 lg:py-[6px] lg:px-[10px] text-[8px] leading-[8px] lg:text-[12px] lg:leading-4 text-irisBlueColor font-[500] mt-2 lg:mt-4 rounded-full">Consultation</div>
 
                             <div className="flex items-center gap-[6px] lg:gap-[10px] mt-2 lg:mt-[18px] ">
-                                <img src={avatarIcon} alt="" />
-                                <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor ">Saparkhan Yerzhan</h4>
+                                <img src={avatarIcon} alt="Patient avatar" />
+                                <h4 className="text-[10px] leading-3 lg:text-[16px] lg:leading-[22px] font-[700] text-headingColor ">Dr. Kwame Asante</h4>
                             </div>
                         </div>
                     </div>
@@ -244,12 +234,12 @@ const Home = () => {
         {/* ======= faq section ========== */}
         <section>
             <div className="container">
-                <div className="flex justify-between gap-[50px] lg:gap-0">
+                <div className="flex justify-between gap-[50px] lg:gap-0 items-center">
                     <div className="w-1/2 hidden md:block">
-                        <img src={faqImg} alt="" />
+                        <img src={faqImg} alt="MEDIGH doctors ready to answer your questions" className="w-full h-[400px] object-cover rounded-lg glass-card p-2" />
                     </div>
 
-                    <div className="w-full md:w-1/2">
+                    <div className="w-full md:w-1/2 glass-card p-6 rounded-2xl">
                         <h2 className="heading">Most questions by our beloved patients</h2>
 
                         <FaqList />

@@ -70,17 +70,18 @@ const Signup = () => {
     };
 
     return (
-        <section className="px-5 xl:px-0">
+        <section className="px-5 xl:px-0 min-h-screen flex items-center justify-center py-10">
+            <div className="absolute inset-0 bg-gradient-to-br from-primaryColor/20 via-transparent to-blue-500/20 -z-10"></div>
             <div className="max-w-[1170px] mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/*-----img box -------*/}
-                    <div className="hidden lg:block bg-primaryColor rounded-l-lg">
-                        <figure className="rounded-l-lg">
-                            <img src={signupImg} alt=""  className="w-full rounded-l-lg"/>
+                    <div className="hidden lg:block glass-card rounded-2xl overflow-hidden">
+                        <figure className="rounded-2xl">
+                            <img src={signupImg} alt=""  className="w-full rounded-2xl"/>
                         </figure>
                     </div>
                     {/*-----sign up form -------*/}
-                    <div className="rounded-l-lg lg:pl-16 py-10">
+                    <div className="glass-card rounded-2xl p-8 lg:pl-16 py-10">
                         <h3 className="text-headingColor text-[22px] leading-9 font-bold mb-10">
                             Create an <span className="text-primaryColor">account</span>
                         </h3>
@@ -93,9 +94,9 @@ const Signup = () => {
                         name="name" 
                         value={formData.name}  
                         onChange={handleInputChange} 
-                        className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
-                        focus:outline-none focus:border-b-primaryColor text-[22px] leading-7 text-headingColor 
-                        placeholder:text-textColor  curcor-pointer" required/>
+                        className="w-full pr-4 py-3 px-4 rounded-lg glass-input
+                        text-[18px] leading-7 text-headingColor 
+                        placeholder:text-textColor" required/>
                     </div>
                     <div className="mb-5">
                         <input 
@@ -104,9 +105,9 @@ const Signup = () => {
                         name="email" 
                         value={formData.email}  
                         onChange={handleInputChange}   
-                        className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
-                        focus:outline-none focus:border-b-primaryColor text-[22px] leading-7 text-headingColor 
-                        placeholder:text-textColor  curcor-pointer" required/>
+                        className="w-full pr-4 py-3 px-4 rounded-lg glass-input
+                        text-[18px] leading-7 text-headingColor 
+                        placeholder:text-textColor" required/>
                     </div>
                     <div className="mb-5">
                         <input 
@@ -115,9 +116,9 @@ const Signup = () => {
                         name="password" 
                         value={formData.password}  
                         onChange={handleInputChange}   
-                        className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
-                        focus:outline-none focus:border-b-primaryColor text-[22px] leading-7 text-headingColor 
-                        placeholder:text-textColor  curcor-pointer" required/>
+                        className="w-full pr-4 py-3 px-4 rounded-lg glass-input
+                        text-[18px] leading-7 text-headingColor 
+                        placeholder:text-textColor" required/>
                     </div>
 
                     <div className="mb-5 flex items-center justify-between">
@@ -129,7 +130,7 @@ const Signup = () => {
                             name="role"
                             value={formData.role}  
                             onChange={handleInputChange}
-                            className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+                            className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 rounded-lg glass-input ml-2"
                             >
                                 <option value="patient">Patient</option>
                                 <option value="doctor">Doctor</option>
@@ -143,7 +144,7 @@ const Signup = () => {
                             name="gender"
                             value={formData.gender}  
                             onChange={handleInputChange}
-                            className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 focus:outline-none"
+                            className="text-textColor font-semibold text-[15px] leading-7 px-4 py-3 rounded-lg glass-input ml-2"
                             >
                                 <option value="">Select</option>
                                 <option value="male">Male</option>
@@ -153,7 +154,7 @@ const Signup = () => {
                         </label>
                     </div>
                     <div className="mb-5 flex items-center gap-3">
-                        { selectedFile && <figure className="w-[60px] h-[60px] rounded-full border-2 border0solid border- primaryColor
+                        { selectedFile && <figure className="w-[60px] h-[60px] rounded-full border-2 border-primaryColor
                         flex items-center justify-center">
                             <img src={previewUrl} alt="" className="w-full rounded-full"/>
                         </figure>}
@@ -175,7 +176,7 @@ const Signup = () => {
                     </div>
                     <div className="mt-7">
                         <button disabled={loading && true} type="submit" 
-                        className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
+                        className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3 glass-button"
                         >
                             { loading ? <HashLoader size={35} color="#ffffff"/> : 'Register' }
                         </button>

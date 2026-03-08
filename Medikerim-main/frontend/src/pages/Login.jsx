@@ -59,8 +59,9 @@ const Login = () => {
         }
     };
     return (
-        <section className="px-5 lg:px-0">
-            <div className="w-full max-w-[570px] mx-auto rounded-lg shadow-md md:p-10">
+        <section className="px-5 lg:px-0 min-h-screen flex items-center justify-center relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-primaryColor/20 via-transparent to-blue-500/20 -z-10"></div>
+            <div className="w-full max-w-[570px] mx-auto rounded-2xl glass-card p-8 md:p-10">
                 <h3 className="text-headingColor text-[16px] leading-9 font-bold mb-10">
                     Hello! <span className="text-primaryColor">Welcome</span> Back🎉
                 </h3>
@@ -72,9 +73,8 @@ const Login = () => {
                         name="email" 
                         value={formData.email}  
                         onChange={handleInputChange} 
-                        className="w-full py-3 border-b border-solid border-[#0066ff61] focus:outline-none 
-                        focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
-                        placeholder:text-textColor curcor-pointer" 
+                        className="w-full py-3 px-4 rounded-lg glass-input text-[16px] leading-7 text-headingColor 
+                        placeholder:text-textColor" 
                         required
                         />
                     </div>
@@ -85,14 +85,13 @@ const Login = () => {
                          name="password" 
                          value={formData.password}  
                          onChange={handleInputChange} 
-                         className="w-full px-4 py-3 border-b border-solid border-[#0066ff61] focus:outline-none 
-                         focus:border-b-primaryColor text-[16px] leading-7 text-headingColor 
-                         placeholder:text-textColor rounded-md curcor-pointer" 
+                         className="w-full px-4 py-3 rounded-lg glass-input text-[16px] leading-7 text-headingColor 
+                         placeholder:text-textColor" 
                          required
                          />
                     </div>
                     <div className="mt-7">
-                        <button type="submit" className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3">
+                        <button type="submit" className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3 glass-button">
                              { loading ? <HashLoader size={25} color="#fff" /> : 'Login'}
                         </button>
                     </div>

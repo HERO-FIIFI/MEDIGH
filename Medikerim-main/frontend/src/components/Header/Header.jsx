@@ -1,6 +1,4 @@
 import { useEffect, useRef, useContext } from 'react';
-import logo from '../../assets/images/logo1.png';
-//import logo from '../../assets/images/logo.png';
 import { NavLink, Link } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
 import { authContext } from '../../context/AuthContext';
@@ -35,24 +33,21 @@ const Header = () => {
     const { user, role, token } = useContext(authContext)
 
     const handleStickyHeader = () => {
-        window.addEventListener('scroll', () => {
-            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-                headerRef.current.classList.add('sticky__header')
-            } else {
-                headerRef.current.classList.remove('sticky__header')
-            }
-        })
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            headerRef.current?.classList.add('sticky__header')
+        } else {
+            headerRef.current?.classList.remove('sticky__header')
+        }
     }
 
     useEffect(() => {
-        handleStickyHeader()
-
+        window.addEventListener('scroll', handleStickyHeader)
         return () => window.removeEventListener('scroll', handleStickyHeader)
-    })
+    }, [])
 
     const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
 
-    return <header className='header flex items-center' ref={headerRef}>
+    return <header className='header flex items-center glass-nav fixed top-0 left-0 right-0 z-50' ref={headerRef}>
         <div className="container">
             <div className='flex items-center justify-between'>
                 {/* ====== logo ======== */}

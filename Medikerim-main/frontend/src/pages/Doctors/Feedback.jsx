@@ -1,6 +1,5 @@
-
 import  { useState } from "react";
-import avatar from "../../assets/images/avatar-icon.png";
+import avatar from "../../assets/images/blackman (1).jpg";
 import { formateDate } from "../../utils/formateDate";
 import {AiFillStar} from 'react-icons/ai';
 import FeedbackForm from "./FeedbackForm"
@@ -9,7 +8,7 @@ const Feedback = () => {
 
      const [showFeedbackForm,setShowFeedbackForm] = useState(false)
     return (
-    <div>
+    <div className="glass-card p-6 rounded-2xl">
         <div className="mb-[50px]">
             <h4 className="text-[20px] leading-[30px] font-bold text-headingColor mb-[30px">
                 All reviews (272)
@@ -17,7 +16,7 @@ const Feedback = () => {
             <div className="flex jutify-between gap-10 mb-[30px]">
                 <div className="flex gap-3">
                     <figure className="w-10 h-10 rounded-full">
-                        <img className="w-full" src={avatar} alt="" />
+                        <img className="w-full rounded-full" src={avatar} alt="" />
                     </figure>
                     <div>
                         <h5 className="text-[16px] leading-6 text-primaryColor font-bold">Ali ahmed</h5>
@@ -36,7 +35,7 @@ const Feedback = () => {
             </div>
         </div>
 
-        {!showFeedbackForm && <div className="text-center"><button className="btn" onClick={()=>setShowFeedbackForm(true)}>Give Feedback</button></div>}
+        {!showFeedbackForm && <div className="text-center"><button className="btn glass-button" onClick={()=>setShowFeedbackForm(true)}>Give Feedback</button></div>}
     {showFeedbackForm && <FeedbackForm/>}    
     </div>
     );

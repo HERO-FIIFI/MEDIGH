@@ -1,6 +1,6 @@
 import doctorImg01 from "../images/doctor (1).jpg";
 import doctorImg02 from "../images/doctor (2).jpg";
-import doctorImg03 from "../images/pexels-tima-miroshnichenko-5452255.jpg";
+import doctorImg03 from "../images/blackman (3).jpg";
 
 export const doctors = [
   {

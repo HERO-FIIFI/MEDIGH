@@ -9,7 +9,7 @@ const DoctorCard = ({ doctor }) => {
 
   return <div className='p-3 lg:p-5'>
     <div className='h-[250px] overflow-hidden rounded-md'>
-      <img src={photo} className='w-full h-full object-cover' alt="" />
+      <img src={photo} className='w-full h-full object-cover' alt={`Photo of Dr. ${name}`} />
     </div>
 
     <h2 className='text-[18px] leading-[30px] lg:text-[26px] lg:leading-9 text-headingColor font-[700] mt-3 lg:mt-5  '>
@@ -20,7 +20,7 @@ const DoctorCard = ({ doctor }) => {
       <span className='bg-[#CCF0F3] text-irisBlueColor py-1 px-2 lg:py-2 lg:px-6 text-[12px] lg:text-[16px] lg:leading-7 font-semibold leading-4 rounded'>{specialization}</span>
 
       <div className='flex items-center gap-[6px]'>
-        <span className='flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor'><img src={starIcon} alt="" />{avgRating}</span>
+        <span className='flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor'><img src={starIcon} alt="Star rating" />{avgRating}</span>
         <span className='text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor'>({totalRating})</span>
       </div>
     </div>
