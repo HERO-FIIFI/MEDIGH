@@ -48,7 +48,6 @@ const Login = () => {
                 },
             });
 
-            console.log(result, "login data");
 
             setLoading(false);
             toast.success(result.message);
@@ -94,13 +93,13 @@ const Login = () => {
                     </div>
                     <div className="mt-7">
                         <button type="submit" className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3">
-                             { loading ? <HashLoader size={25} color="#fff" /> : ' Kiru'} 
+                             { loading ? <HashLoader size={25} color="#fff" /> : 'Login'}
                         </button>
                     </div>
                     <p className="mt-5 text-textColor text-center">
                         Don't have an account? 
                         <Link to="/register" className="text-primaryColor font-medium ml-1">
-                            Tirkelu
+                            Register
                         </Link>
                     </p>
                 </form>

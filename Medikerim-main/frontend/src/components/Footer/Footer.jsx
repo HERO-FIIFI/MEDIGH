@@ -26,15 +26,15 @@ const socialLinks = [
 const quickLinks01 = [
   {
     path: "/home",
-    display: "Basty bet",
+    display: "Home",
   },
   {
     path: "/",
-    display: "Biz zhaily",
+    display: "About Us",
   },
   {
     path: "/services",
-    display: "Servister",
+    display: "Services",
   },
   {
     path: "/",
@@ -45,19 +45,19 @@ const quickLinks01 = [
 const quickLinks02 = [
   {
     path: "/find-a-doctor",
-    display: "Därıgerdı tabu",
+    display: "Find a Doctor",
   },
   {
     path: "/",
-    display: "Qabyldauğa jazylu",
+    display: "Book Appointment",
   },
   {
     path: "/",
-    display: "Klinikalardy tabyñyz",
+    display: "Find Clinics",
   },
   {
     path: "/",
-    display: "Pikir qaldyru",
+    display: "Leave a Review",
   },
 ];
 
@@ -76,14 +76,16 @@ const quickLinks03 = [
 const Footer = () => {
 
   const year = new Date().getFullYear();
-  console.log('year')
 
   return <footer className='pb-16 pt-10'>
     <div className='container'>
       <div className='flex justify-between flex-col md:flex-row flex-wrap gap-[30px]'>
         <div>
-          <img src={logo} alt="" />
-          <p className='text-[16px] leading-7 font-[400] text-textColor mt-4'>CopyRight {year} developed by Tech Sirens</p>
+          <h2 className='flex items-center gap-2 text-[28px] font-[800] text-primaryColor tracking-wide'>
+            <span className='bg-primaryColor text-white text-[18px] font-[900] w-9 h-9 flex items-center justify-center rounded-md'>✚</span>
+            MEDIGH
+          </h2>
+          <p className='text-[16px] leading-7 font-[400] text-textColor mt-4'>Copyright {year} MEDIGH. All rights reserved.</p>
           <p className='text-[14px] leading-6 font-[400] text-textColor mt-1'>Powered by <a href="https://seamsoftlabs.com" target="_blank" rel="noreferrer" className='text-primaryColor hover:underline'>Seamsoft</a></p>
           <div className='flex items-center gap-3 mt-4'>
             {socialLinks.map((link, index) => <Link to={link.path} key={index} className='w-9 h-9 border border-solid border-[#181A1E] rounded-full flex items-center justify-center group hover:bg-primaryColor hover:border-none'>{link.icon}</Link>)}
@@ -96,31 +98,31 @@ const Footer = () => {
           <ul>
             {quickLinks01.map((item, index) =>
               <li key={index} className='mb-4'>
-                <Link to={item.path} className='text-[16px] leading-7 font-[400] text-textXolor'>{item.display}</Link>
+                <Link to={item.path} className='text-[16px] leading-7 font-[400] text-textColor'>{item.display}</Link>
               </li>
             )}
           </ul>
         </div>
 
         <div>
-          <h2 className='text-[20px] leading-[30px] font-[700] mb-6 text-headingColor'>Men qalaimyn:</h2>
+          <h2 className='text-[20px] leading-[30px] font-[700] mb-6 text-headingColor'>I Want To:</h2>
 
           <ul>
             {quickLinks02.map((item, index) =>
               <li key={index} className='mb-4'>
-                <Link to={item.path} className='text-[16px] leading-7 font-[400] text-textXolor'>{item.display}</Link>
+                <Link to={item.path} className='text-[16px] leading-7 font-[400] text-textColor'>{item.display}</Link>
               </li>
             )}
           </ul>
         </div>
 
         <div>
-          <h2 className='text-[20px] leading-[30px] font-[700] mb-6 text-headingColor'>Qoldau korsetu</h2>
+          <h2 className='text-[20px] leading-[30px] font-[700] mb-6 text-headingColor'>Support</h2>
 
           <ul>
             {quickLinks03.map((item, index) =>
               <li key={index} className='mb-4'>
-                <Link to={item.path} className='text-[16px] leading-7 font-[400] text-textXolor'>{item.display}</Link>
+                <Link to={item.path} className='text-[16px] leading-7 font-[400] text-textColor'>{item.display}</Link>
               </li>
             )}
           </ul>

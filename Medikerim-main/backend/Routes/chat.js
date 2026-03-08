@@ -1,9 +1,8 @@
-import express from 'express'
-import { register, login } from '../Controllers/chatController.js'
+import express from 'express';
+import { completions } from '../Controllers/chatController.js';
 
-const router = express.Router()
+const router = express.Router();
 
-router.post('/register', register)
+router.post('/completions', completions);
 
-
-export default router
+export default router;

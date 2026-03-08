@@ -1,14 +1,9 @@
-const PORT = 8000
-const express = require('express')
-const cors = require('cors')
-const app = express()
-require('dotenv').config()
-app.use(express.json())
-app.use(cors())
+import dotenv from 'dotenv';
+dotenv.config();
 
-const API_KEY = process.env.API_KEY
+const API_KEY = process.env.API_KEY;
 
-app.post('/completions', async (req, res) => {
+export const completions = async (req, res) => {
     const options = {
         method: "POST",
         headers: {
@@ -20,14 +15,13 @@ app.post('/completions', async (req, res) => {
             messages: [{ role: "user", content: req.body.message }],
             max_tokens: 100,
         })
-    }
+    };
     try {
-        const response = await fetch('https://api.openai.com/v1/chat/completions', options)
-        const data = await response.json()
-        res.send(data)
+        const response = await fetch('https://api.openai.com/v1/chat/completions', options);
+        const data = await response.json();
+        res.send(data);
     } catch (error) {
-        console.error(error)
+        console.error(error);
+        res.status(500).json({ error: 'Failed to get completion' });
     }
-})
-
-app.listen(PORT, () => console.log('Your server is running on Port: ' + PORT))
+};

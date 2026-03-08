@@ -177,13 +177,13 @@ const Signup = () => {
                         <button disabled={loading && true} type="submit" 
                         className="w-full bg-primaryColor text-white text-[18px] leading-[30px] rounded-lg px-4 py-3"
                         >
-                            { loading ? <HashLoader size={35} color="#ffffff"/> : `Tirkelu` }
+                            { loading ? <HashLoader size={35} color="#ffffff"/> : 'Register' }
                         </button>
                     </div>
                     <p className="mt-5 text-textColor text-center">
                         Already have an account? 
                         <Link to="/login" className="text-primaryColor font-medium ml-1">
-                            Kiru
+                            Login
                         </Link>
                     </p>
                        

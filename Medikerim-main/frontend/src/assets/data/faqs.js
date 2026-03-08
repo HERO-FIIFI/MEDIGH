@@ -1,27 +1,27 @@
 export const faqs = [
   {
-    question: "Sizdiń densaýlyqqa qyzmetteriniz qandaı?",
+    question: "What health services do you offer?",
     content:
-      "One Medical sapasy men qoljetimdi qyzmet kórsetýdiń joǵary deńgeıin qamtamasyz etetin pasıentterdiń qajettilikterin eskere otyryp ázirlengen jaqsartylǵan medısınalyq kómek úlgisine negizdelgen. Biz buǵan ınovasıalyq dızaın, tutynýshylarǵa tamasha qyzmet kórsetý jáne tehnologıany tıimdi paıdalaný arqyly qol jetkizemiz.",
+      "MEDIGH is built on an improved model of medical care designed with patient needs in mind, ensuring high-quality, accessible service. We achieve this through innovative design, excellent customer service, and effective use of technology.",
   },
   {
-    question: "Eger maǵan aýrýhanaǵa barý kerek bolsa ne bolady?",
+    question: "What happens if I need to go to the hospital?",
     content:
-      "One Medical sapasy men qoljetimdi qyzmet kórsetýdiń joǵary deńgeıin qamtamasyz etetin pasıentterdiń qajettilikterin eskere otyryp ázirlengen jaqsartylǵan medısınalyq kómek úlgisine negizdelgen. Biz buǵan ınovasıalyq dızaın, tutynýshylarǵa tamasha qyzmet kórsetý jáne tehnologıany tıimdi paıdalaný arqyly qol jetkizemiz.",
+      "MEDIGH is built on an improved model of medical care designed with patient needs in mind, ensuring high-quality, accessible service. We achieve this through innovative design, excellent customer service, and effective use of technology.",
   },
   {
-    question: "Eger maǵan aýrýhanaǵa barý kerek bolsa ne bolady?",
+    question: "Do you offer same-day appointments?",
     content:
-      "One Medical sapasy men qoljetimdi qyzmet kórsetýdiń joǵary deńgeıin qamtamasyz etetin pasıentterdiń qajettilikterin eskere otyryp ázirlengen jaqsartylǵan medısınalyq kómek úlgisine negizdelgen. Biz buǵan ınovasıalyq dızaın, tutynýshylarǵa tamasha qyzmet kórsetý jáne tehnologıany tıimdi paıdalaný arqyly qol jetkizemiz.",
+      "MEDIGH is built on an improved model of medical care designed with patient needs in mind, ensuring high-quality, accessible service. We achieve this through innovative design, excellent customer service, and effective use of technology.",
   },
   {
-    question: "Men sizdiń medısınalyq kabınetińizge bara alamyn ba?",
+    question: "Can I visit your medical office in person?",
     content:
-      "One Medical sapasy men qoljetimdi qyzmet kórsetýdiń joǵary deńgeıin qamtamasyz etetin pasıentterdiń qajettilikterin eskere otyryp ázirlengen jaqsartylǵan medısınalyq kómek úlgisine negizdelgen. Biz buǵan ınovasıalyq dızaın, tutynýshylarǵa tamasha qyzmet kórsetý jáne tehnologıany tıimdi paıdalaný arqyly qol jetkizemiz.",
+      "MEDIGH is built on an improved model of medical care designed with patient needs in mind, ensuring high-quality, accessible service. We achieve this through innovative design, excellent customer service, and effective use of technology.",
   },
   {
-    question: "Siz shuǵyl medısınalyq kómek kórsetesiz be?",
+    question: "Do you provide emergency medical care?",
     content:
-      "One Medical sapasy men qoljetimdi qyzmet kórsetýdiń joǵary deńgeıin qamtamasyz etetin pasıentterdiń qajettilikterin eskere otyryp ázirlengen jaqsartylǵan medısınalyq kómek úlgisine negizdelgen. Biz buǵan ınovasıalyq dızaın, tutynýshylarǵa tamasha qyzmet kórsetý jáne tehnologıany tıimdi paıdalaný arqyly qol jetkizemiz.",
+      "MEDIGH is built on an improved model of medical care designed with patient needs in mind, ensuring high-quality, accessible service. We achieve this through innovative design, excellent customer service, and effective use of technology.",
   },
 ];

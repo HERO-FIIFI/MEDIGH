@@ -1,36 +1,36 @@
-import doctorImg01 from "../images/doctor-img011.png";
-import doctorImg02 from "../images/about1.png";
-import doctorImg03 from "../images/hero-img022.png";
+import doctorImg01 from "../images/doctor (1).jpg";
+import doctorImg02 from "../images/doctor (2).jpg";
+import doctorImg03 from "../images/pexels-tima-miroshnichenko-5452255.jpg";
 
 export const doctors = [
   {
     id: "01",
-    name: "Dr. Saule Shakim",
-    specialization: "Hirurg",
+    name: "Dr. Kwame Asante",
+    specialization: "Surgeon",
     avgRating: 4.8,
     totalRating: 272,
     photo: doctorImg01,
     totalPatients: 1500,
-    hospital: "Ordabasy audany emhanasy.",
+    hospital: "MEDIGH City Hospital",
   },
   {
     id: "02",
-    name: "Dr. Taşpulatov Erzhan",
-    specialization: "Hirurg",
-    avgRating: 4.8,
-    totalRating: 272,
+    name: "Dr. Amara Osei",
+    specialization: "Cardiologist",
+    avgRating: 4.9,
+    totalRating: 318,
     photo: doctorImg02,
-    totalPatients: 1500,
-    hospital: "Almaty balalar emhanasy.",
+    totalPatients: 1200,
+    hospital: "MEDIGH Children's Clinic",
   },
   {
     id: "03",
-    name: "Dr. Aliya Samatkyzy",
+    name: "Dr. Nkechi Adeyemi",
     specialization: "Dermatologist",
-    avgRating: 4.8,
-    totalRating: 272,
+    avgRating: 4.7,
+    totalRating: 241,
     photo: doctorImg03,
-    totalPatients: 1500,
-    hospital: "Astana ortalyq emhana.",
+    totalPatients: 980,
+    hospital: "MEDIGH Central Clinic",
   },
 ];

@@ -33,7 +33,7 @@
 //             },
 //             sharedLinks: [{
 //                 name: "Copy link",
-//                 url: `http://localhost:5173/room/${roomId}`
+//                 url: `${window.location.origin}/room/${roomId}`
 //             }],
 //         });
 //     };
@@ -81,7 +81,7 @@ const Room = () => {
             },
             sharedLinks: [{
                 name: "Copy link",
-                url: `http://localhost:5173/room/${roomId}`
+                url: `${window.location.origin}/room/${roomId}`
             }],
         });
     };

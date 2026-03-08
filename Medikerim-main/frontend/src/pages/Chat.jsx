@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import styled from "styled-components";
+import { CHAT_URL } from '../config.js'
 
 const ChatContainer = styled.div`
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=PT+Sans:wght@400;700&display=swap');
@@ -168,14 +169,12 @@ const Chat = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/completions', options);
+      const response = await fetch(`${CHAT_URL}/completions`, options);
       const data = await response.json();
 
-      // Проверяем наличие свойства choices
       if (data.choices && data.choices.length > 0) {
         setMessage(data.choices[0].message);
       } else {
-        // Если choices отсутствует или пуст, устанавливаем сообщение по умолчанию
         setMessage({ role: 'default', content: 'No response from AI.' });
       }
     } catch (error) {
@@ -186,8 +185,6 @@ const Chat = () => {
 
 
   useEffect(() => {
-    console.log(currentTitle, value, message);
-
     if (!currentTitle && value && message) {
       setCurrentTitle(value);
     }
@@ -211,13 +208,8 @@ const Chat = () => {
 
 
 
-  // console.log(previousChats)
-
-  // console.log(uniqueTitles)
-  console.log(previousChats)
   const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
   const uniqueTitles = Array.from(new Set(previousChats.map(previousChat => previousChat.title)))
-  console.log(uniqueTitles)
 
 
 
@@ -225,16 +217,16 @@ const Chat = () => {
     <ChatContainer>
       <div className="app">
         <section className="side-bar">
-          <button onClick={createNewChat}>+ Zhana chat</button>
+          <button onClick={createNewChat}>+ New Chat</button>
           <ul className="history">
             {uniqueTitles?.map((uniqueTitle, index) => <li key={index} onClick={() => handleClick(uniqueTitle)}>{uniqueTitle}</li>)}
           </ul>
           <nav>
-            <p>Made by Medikerim</p>
+            <p>Made by MEDIGH</p>
           </nav>
         </section>
         <section className="main">
-          {!currentTitle && <h1>Medikerim Ai Chat</h1>}
+          {!currentTitle && <h1>MEDIGH AI Chat</h1>}
           <ul className="feed">
             {currentChat?.map((chatMessage, index) => (
               <li key={index}>

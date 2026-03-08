@@ -8,15 +8,15 @@ import { authContext } from '../../context/AuthContext';
 const navLinks = [
     {
         path: '/home',
-        display: 'Basty bet'
+        display: 'Home'
     },
     {
         path: '/doctors',
-        display: 'Därıgerdı tabu'
+        display: 'Find a Doctor'
     },
     {
         path: '/services',
-        display: 'Servister'
+        display: 'Services'
     },
     {
         path: '/contact',
@@ -24,7 +24,7 @@ const navLinks = [
     },
     {
         path: '/chat',
-        display: 'Med Ai Chat'
+        display: 'Med AI Chat'
     },
 ]
 
@@ -57,7 +57,10 @@ const Header = () => {
             <div className='flex items-center justify-between'>
                 {/* ====== logo ======== */}
                 <div>
-                    <img src={logo} alt="" />
+                    <Link to='/home' className='flex items-center gap-1 text-[26px] font-[800] text-primaryColor tracking-wide'>
+                        <span className='bg-primaryColor text-white text-[18px] font-[900] w-8 h-8 flex items-center justify-center rounded-md'>✚</span>
+                        MEDIGH
+                    </Link>
                 </div>
 
                 {/* ====== menu ======== */}
@@ -93,7 +96,7 @@ const Header = () => {
                         </div>
                     ) : (
                         <Link to='/login'>
-                            <button className='bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[50px]'>Kiru</button>
+                            <button className='bg-primaryColor py-2 px-6 text-white font-[600] h-[44px] flex items-center justify-center rounded-[50px]'>Login</button>
                         </Link>
                     )}
 

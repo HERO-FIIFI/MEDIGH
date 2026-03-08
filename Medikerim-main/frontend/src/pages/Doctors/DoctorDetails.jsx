@@ -1,5 +1,5 @@
 import React, { useState } from "react"; //6.9k (gzipped: 2.7k)
-import doctorImg from '../../assets/images/doctor-img011.png'
+import doctorImg from '../../assets/images/doctor (1).jpg'
 import starIcon from '../../assets/images/Star.png'
 import DoctorAbout from "./DoctorAbout";
 import Feedback from "./Feedback";
